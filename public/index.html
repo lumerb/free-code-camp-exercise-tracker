@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            width: 640px;
+            margin: 0 auto;
+        }
+
+        .forms-container {
+            display: grid;
+            align-items: start;
+            grid-template-columns: .5fr .5fr;
+        }
+
+        form {
+            color: crimson;
+            text-align: left;
+            display: grid;
+            grid-row-gap: .5em;
+            padding: 20px;
+            background-color: coral;
+            margin: 10px;
+        }
+        input{
+            padding: 1em;
+            border: 2px cornsilk;
+            margin-bottom: 20px;
+            color:darkorange;
+        }
+        input:focus{
+            border-color:none;
+            outline: none;
+        }
+        input::placeholder{
+            color:darksalmon;
+        }
+        button{
+            border: 2px chocolate;
+            background-color: crimson;
+            padding: 1.25em;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: darkmagenta;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3>APIs and Microservices Projects</h3>
+        <h1>Exercise Tracker</h1>
+        <div class="forms-container">
+
+            <form method="post" action="/api/exercise/new-user">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="username" required />
+                <button type="submit">SUBMIT</button>
+            </form>
+
+
+            <form method="post" action="/api/exercise/add">
+                <label>UserName</label>
+                <input type="text" name="username" placeholder="username" required />
+                <label>Exercise</label>
+                <input type="text" name="description" placeholder="push ups" required />
+                <label>Duration(mins)</label>
+                <input type="number" name="duration" min="0" max="120" placeholder="5" required />
+                <label>Date</label>
+                <input type="date" name="date" required />
+                <button type="submit">SUBMIT</button>
+
+            </form>
+
+        </div>
+        <p>by <a href = "http://lumerb.com/" style="color:darkslateblue;"><strong>lumerbcode</strong></a></p>
+
+
+    </div>
+
+</body>
+
+</html>
